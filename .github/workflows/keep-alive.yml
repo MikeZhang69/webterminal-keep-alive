@@ -20,4 +20,4 @@ jobs:
 
       - name: Ping AI Coding Space
         run: |
-          curl -f https://huggingface.co/spaces/MikeZhang69/ai-coding
+          curl -f -H "Authorization: Bearer $HF_TOKEN" https://huggingface.co/api/spaces/MikeZhang69/ai-coding
