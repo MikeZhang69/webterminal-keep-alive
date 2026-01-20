@@ -14,7 +14,7 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           echo "Pinging terminal space..."
-          curl -f -H "Authorization: Bearer $HF_TOKEN" https://huggingface.co/spaces/MikeZhang69/Webterminal
+          curl -f -H "Authorization: Bearer $HF_TOKEN" https://huggingface.co/api/spaces/MikeZhang69/Webterminal
           echo "✓ Terminal ping successful"
 
 
