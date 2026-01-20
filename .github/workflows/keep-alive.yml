@@ -6,9 +6,13 @@ on:
   workflow_dispatch:  # Manual trigger
 
 jobs:
-  ping-space:
+  ping-spaces:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping HuggingFace Space
+      - name: Ping Webterminal Space
         run: |
           curl -f https://huggingface.co/spaces/MikeZhang69/Webterminal
+      
+      - name: Ping AI Coding Space
+        run: |
+          curl -f https://huggingface.co/spaces/MikeZhang69/ai-coding
