@@ -19,5 +19,9 @@ jobs:
 
 
       - name: Ping AI Coding Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
+          echo "Pinging ai-coding space..."
           curl -f -H "Authorization: Bearer $HF_TOKEN" https://huggingface.co/api/spaces/MikeZhang69/ai-coding
+          echo "✓ AI-Coding ping successful"
