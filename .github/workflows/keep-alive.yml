@@ -10,9 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ping Webterminal Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          curl -f https://mikezhang69-webterminal.hf.space
-      
+          echo "Pinging terminal space..."
+          curl -f -H "Authorization: Bearer $HF_TOKEN" https://huggingface.co/spaces/MikeZhang69/Webterminal
+          echo "✓ Terminal ping successful"
+
+
       - name: Ping AI Coding Space
         run: |
           curl -f https://huggingface.co/spaces/MikeZhang69/ai-coding
