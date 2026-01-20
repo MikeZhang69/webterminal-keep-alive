@@ -1,0 +1,14 @@
+name: Keep HuggingFace Space Alive
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # Every 10 minutes
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  ping-space:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping HuggingFace Space
+        run: |
+          curl -f https://huggingface.co/spaces/MikeZhang69/Webterminal
